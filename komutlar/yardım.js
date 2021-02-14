@@ -5,10 +5,10 @@ var prefix = ayarlar.prefix;
 
 exports.run = async(client, message, args) => {
 
-        const jkood = new Discord.MessageEmbed()
+        const synx = new Discord.MessageEmbed()
 
              .setColor('#fff000')
-             .addField(`İşte Komutlarım!`, `
+             .addField(`Synx - Guard Bot Yardım Komutları`, `
              ${prefix}antiraid aç
              ${prefix}capsengel aç
              ${prefix}emojikoruma aç
@@ -28,7 +28,7 @@ exports.run = async(client, message, args) => {
              `)
              .setFooter(`${message.author.username} Tarafından istendi.`, message.author.avatarURL())
             
-        return message.channel.send(jkood);
+        return message.channel.send(synx);
 }
 
 exports.conf = {
@@ -42,4 +42,3 @@ exports.help = {
 	description : 'Komut kategorilerini atar',
 	usage : '!yardım'
 }
-//DÜZENLENECEK

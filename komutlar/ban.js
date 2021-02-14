@@ -12,14 +12,14 @@ if (!message.guild) {
   return message.author.send(ozelmesajuyari); }
   let guild = message.guild
   let reason = args.slice(1).join(' ');
-  let dızcılaraselam = message.mentions.users.first();
+  let synx = message.mentions.users.first();
 
   if (message.mentions.users.size < 1) return message.channel.send(`Lütfen sunucudan yasaklayacağınız kişiyi etiketleyin.`).catch(console.error);
 
-  if (!message.guild.member(dızcılaraselam).bannable) return message.channel.send(`❌ Belirttiğiniz kişinin Yetkisi Benden Daha Üstün!`);
-  message.guild.member(dızcılaraselam).ban();
+  if (!message.guild.member(synx).bannable) return message.channel.send(`❌ Belirttiğiniz kişinin Yetkisi Benden Daha Üstün!`);
+  message.guild.member(synx).ban();
 
-  message.channel.send(" Başarılı, " + dızcılaraselam + " İD'li kullanıcı **" + reason + "** sebebiyle sunucudan yasaklandı.")
+  message.channel.send(" Başarılı, " + synx + " İD'li kullanıcı **" + reason + "** sebebiyle sunucudan yasaklandı.")
      
 };
 

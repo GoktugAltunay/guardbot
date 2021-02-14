@@ -22,9 +22,9 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`discord.gg/codework`, { type:'WATCHING' })
+ client.user.setActivity(`Synx Development - V12 Guard Bot Altyapı!`, { type:'WATCHING' })
   
-  console.log("CodeWork Akıyor!!")
+  console.log("Bot Aktif!")
 });
 
 const log = message => {
@@ -130,21 +130,21 @@ client.login(process.env.TOKEN)
 client.on("guildMemberAdd", async member => {
 let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
   if (!kanal) return;  
-  var darknesyt = member.guild.owner
+  var synx2 = member.guild.owner
   if (member.user.bot === true) {
      if (db.fetch(`botizin_${member.guild.id}.${member.id}`) == "aktif") {
-    let darknesguardv2 = new Discord.MessageEmbed()
+    let synx = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setThumbnail(member.user.avatarURL())
       .setDescription(`**${member.user.tag}** (${member.id}) adlı bota bir yetkili izin verdi eğer kaldırmak istiyorsanız **!bot-izni kaldır <botid>**.`);
-    darknesyt.send(darknesguardv2);
+    synx2.send(synx);
      } else {
        let izinverilmemişbot = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setThumbnail(member.user.avatarURL())
       .setDescription("**" + member.user.tag +"**" + " (" + member.id+ ") " + "adlı bot sunucuya eklendi ve banladım eğer izin vermek istiyorsanız **" + "!bot-izni ver <botid>**")
        member.ban();// Eğer sunucudan atmak istiyorsanız ban kısmını kick yapın
-       darknesyt.send(izinverilmemişbot)
+       synx2.send(izinverilmemişbot)
 }
   }
 });
@@ -178,8 +178,8 @@ let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
 //KANAL & ROL KORUMA
 
 client.on("roleDelete", async role => {
-  let rolko = await db.fetch(`rolk_${role.guild.id}`);
-  if (rolko) { 
+  let synx2 = await db.fetch(`synx_${role.guild.id}`);
+  if (synx2) { 
          const entry = await role.guild.fetchAuditLogs({ type: "ROLE_DELETE" }).then(audit => audit.entries.first());
     if (entry.executor.id == client.user.id) return;
   role.guild.roles.create({ data: {
@@ -196,8 +196,8 @@ client.on("roleDelete", async role => {
 //
 
 client.on("roleCreate", async role => {
-  let rolk = await db.fetch(`rolk_${role.guild.id}`);
-  if (rolk) { 
+  let synx = await db.fetch(`synx_${role.guild.id}`);
+  if (synx) { 
        const entry = await role.guild.fetchAuditLogs({ type: "ROLE_CREATE" }).then(audit => audit.entries.first());
     if (entry.executor.id == client.user.id) return;
   role.delete()
@@ -339,8 +339,8 @@ client.on("guildMemberAdd", member => {
    var user = member.user
    x = x.replace("birkaç saniye önce", " ")
    if(!x.includes("önce") || x.includes("sonra") ||x == " ") {
-   var rol = member.guild.roles.cache.get("785565778140332033") //Cezalı Rol İD
-   var kayıtsız = member.guild.roles.cache.get("757559050232660019") //Alınacak Rol İD
+   var rol = member.guild.roles.cache.get("") //Cezalı Rol İD
+   var kayıtsız = member.guild.roles.cache.get("") //Alınacak Rol İD
    member.roles.add(rol)
 member.user.send('Hesabın 3 günden önce açıldığı için cezalıya atıldın! Açtırmak İçin Yetkililere Bildir.')
 setTimeout(() => {

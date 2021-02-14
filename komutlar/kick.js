@@ -13,11 +13,11 @@ return message.author.send(ozelmesajuyari);
 }
 let guild = message.guild
 let reason = args.slice(1).join(' ');
-let dızcılaraselam = message.mentions.users.first();
+let synx = message.mentions.users.first();
 if (message.mentions.users.size < 1) return message.channel.send(`Lütfen sunucudan atacağınız kişiyi etiketleyin.`).catch(console.error);
-if (!message.guild.member(dızcılaraselam).bannable) return message.channel.send(`Belirttiğiniz kişinin Yetkisi Benden Daha Üstün!`);
-message.guild.member(dızcılaraselam).kick();
-message.channel.send(" Başarılı, "+ dızcılaraselam +" İD'li kullanıcı **" + reason + "** sebebiyle sunucudan atıldı.")
+if (!message.guild.member(synx).bannable) return message.channel.send(`Belirttiğiniz kişinin Yetkisi Benden Daha Üstün!`);
+message.guild.member(synx).kick();
+message.channel.send(" Başarılı, "+ synx +" İD'li kullanıcı **" + reason + "** sebebiyle sunucudan atıldı.")
      
 };
 
