@@ -22,13 +22,13 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Synx Development - V12 Guard Bot Altyapı!`, { type:'WATCHING' })
+ client.user.setActivity(`TUGRUL❤️✮ NOCK!
   
   console.log("Bot Aktif!")
 });
 
 const log = message => {
-  console.log(` ${message}`);
+  console.log(`${message} `) ;
 };
 require('./util/eventLoader.js')(client);
 
