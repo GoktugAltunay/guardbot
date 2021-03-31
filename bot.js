@@ -21,7 +21,7 @@ client.on("ready", async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
 
-  client.user.setActivity(`TUGRUL❤️✮ NOCK!`, { type: "WATCHING" });
+  client.user.setActivity(`T E N R A`, { type: "WATCHING" });
 
   console.log("Bot Aktif!");
 });
@@ -130,7 +130,7 @@ client.on("guildMemberAdd", async member => {
         .setColor("RANDOM")
         .setThumbnail(member.user.avatarURL())
         .setDescription(
-          `**${member.user.tag}** (${member.id}) adlı bota bir yetkili izin verdi eğer kaldırmak istiyorsanız **!bot-izni kaldır <botid>**.`
+          `**${member.user.tag}** (${member.id}) adlı bota bir yetkili izin verdi eğer kaldırmak istiyorsanız **-bot-izni kaldır <botid>**.`
         );
       synx2.send(synx);
     } else {
@@ -145,9 +145,9 @@ client.on("guildMemberAdd", async member => {
             member.id +
             ") " +
             "adlı bot sunucuya eklendi ve banladım eğer izin vermek istiyorsanız **" +
-            "!bot-izni ver <botid>**"
+            "-bot-izni ver <botid>**"
         );
-      member.ban(); // Eğer sunucudan atmak istiyorsanız ban kısmını kick yapın
+      member.kick(); // Eğer sunucudan atmak istiyorsanız ban kısmını kick yapın
       synx2.send(izinverilmemişbot);
     }
   }
@@ -436,8 +436,8 @@ client.on("guildMemberAdd", member => {
   var user = member.user;
   x = x.replace("birkaç saniye önce", " ");
   if (!x.includes("önce") || x.includes("sonra") || x == " ") {
-    var rol = member.guild.roles.cache.get(""); //Cezalı Rol İD
-    var kayıtsız = member.guild.roles.cache.get(""); //Alınacak Rol İD
+    var rol = member.guild.roles.cache.get("826790435996434433"); //Cezalı Rol İD
+    var kayıtsız = member.guild.roles.cache.get("814216491086905344"); //Alınacak Rol İD
     member.roles.add(rol);
     member.user.send(
       "Hesabın 3 günden önce açıldığı için cezalıya atıldın! Açtırmak İçin Yetkililere Bildir."
