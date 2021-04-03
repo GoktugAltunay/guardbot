@@ -9,22 +9,22 @@ exports.run = async(client, message, args) => {
 
              .setColor('#fff000')
              .addField(`Komuts`, `
-             ${prefix}antiraid aç
-             ${prefix}capsengel aç
-             ${prefix}emojikoruma aç
-             ${prefix}everengel aç
-             ${prefix}kanalkoruma aç
-             ${prefix}küfürengel aç
-             ${prefix}modlog #kanal
-             ${prefix}reklamengel aç
-             ${prefix}rolkoruma aç
-             ${prefix}sohbet-aç
-             ${prefix}sohbet-kapat
-             ${prefix}sil-üye @üye miktar
-             ${prefix}sil miktar
-             ${prefix}yavaşmod süre
-             ${prefix}ban @üye sebep
-             ${prefix}kick @üye sebep             
+             • ${prefix}antiraid aç
+             • ${prefix}capsengel aç
+             • ${prefix}emojikoruma aç
+             • ${prefix}everengel aç
+             • ${prefix}kanalkoruma aç
+             • ${prefix}küfürengel aç
+             • ${prefix}modlog #kanal
+             • ${prefix}reklamengel aç
+             • ${prefix}rolkoruma aç
+             • ${prefix}sohbet-aç
+             • ${prefix}sohbet-kapat
+             • ${prefix}sil-üye @üye miktar
+             • ${prefix}sil miktar
+             • ${prefix}yavaşmod süre
+             • ${prefix}ban @üye sebep
+             • ${prefix}kick @üye sebep             
              `)
              .setFooter(`${message.author.username} Tarafından istendi.`, message.author.avatarURL())
             
