@@ -8,23 +8,23 @@ exports.run = async(client, message, args) => {
         const synx = new Discord.MessageEmbed()
 
              .setColor('#fff000')
-             .addField(`Komuts`, `
-             • ${prefix}antiraid aç
-             • ${prefix}capsengel aç
-             • ${prefix}emojikoruma aç
-             • ${prefix}everengel aç
-             • ${prefix}kanalkoruma aç
-             • ${prefix}küfürengel aç
-             • ${prefix}modlog #kanal
-             • ${prefix}reklamengel aç
-             • ${prefix}rolkoruma aç
-             • ${prefix}sohbet-aç
-             • ${prefix}sohbet-kapat
-             • ${prefix}sil-üye @üye miktar
-             • ${prefix}sil miktar
-             • ${prefix}yavaşmod süre
-             • ${prefix}ban @üye sebep
-             • ${prefix}kick @üye sebep             
+             .addField(`T E N R A Guard Yardım Komutları`, `
+             • <a:yldzlar:826880850225922049> ${prefix}antiraid aç
+             • <a:yldzlar:826880850225922049> ${prefix}capsengel aç
+             • <a:yldzlar:826880850225922049> ${prefix}emojikoruma aç
+             • <a:yldzlar:826880850225922049> ${prefix}everengel aç
+             • <a:yldzlar:826880850225922049> ${prefix}kanalkoruma aç
+             • <a:yldzlar:826880850225922049> ${prefix}küfürengel aç
+             • <a:yldzlar:826880850225922049> ${prefix}modlog #kanal
+             • <a:yldzlar:826880850225922049> ${prefix}reklamengel aç
+             • <a:yldzlar:826880850225922049> ${prefix}rolkoruma aç
+             • <a:yldzlar:826880850225922049> ${prefix}sohbet-aç
+             • <a:yldzlar:826880850225922049> ${prefix}sohbet-kapat
+             • <a:yldzlar:826880850225922049> ${prefix}sil-üye @üye miktar
+             • <a:yldzlar:826880850225922049> ${prefix}sil miktar
+             • <a:yldzlar:826880850225922049> ${prefix}yavaşmod süre
+             • <a:yldzlar:826880850225922049> ${prefix}ban @üye sebep
+             • <a:yldzlar:826880850225922049> ${prefix}kick @üye sebep             
              `)
              .setFooter(`${message.author.username} Tarafından istendi.`, message.author.avatarURL())
             
