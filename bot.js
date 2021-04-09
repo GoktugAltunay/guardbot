@@ -702,6 +702,6 @@ client.on("voiceStateUpdate", (oldMember, newMember) => {
 
 //Modlog Son
 client.on("ready", async () => {
-      let botVoiceChannel = client.channels.cache.get("823331654848217108");
+      let botVoiceChannel = client.channels.cache.get("827626155782832168");
       if (botVoiceChannel) botVoiceChannel.join().catch(err => console.error("Bot Ses Kanalına Bağlanamıyor, Lütfen Ses Kanal ID'sini Kontrol Et."));
     });
