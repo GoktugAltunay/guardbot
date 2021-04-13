@@ -436,8 +436,8 @@ client.on("guildMemberAdd", member => {
   var user = member.user;
   x = x.replace("birkaç saniye önce", " ");
   if (!x.includes("önce") || x.includes("sonra") || x == " ") {
-    var rol = member.guild.roles.cache.get("826790435996434433"); //Cezalı Rol İD
-    var kayıtsız = member.guild.roles.cache.get("814216491086905344"); //Alınacak Rol İD
+    var rol = member.guild.roles.cache.get("831628917184921690"); //Cezalı Rol İD
+    var kayıtsız = member.guild.roles.cache.get("831622565717737492"); //Alınacak Rol İD
     member.roles.add(rol);
     member.user.send(
       "Hesabın 3 günden önce açıldığı için cezalıya atıldın! Açtırmak İçin Yetkililere Bildir."
@@ -702,6 +702,6 @@ client.on("voiceStateUpdate", (oldMember, newMember) => {
 
 //Modlog Son
 client.on("ready", async () => {
-      let botVoiceChannel = client.channels.cache.get("827626155782832168");
+      let botVoiceChannel = client.channels.cache.get("831646515940294707");
       if (botVoiceChannel) botVoiceChannel.join().catch(err => console.error("Bot Ses Kanalına Bağlanamıyor, Lütfen Ses Kanal ID'sini Kontrol Et."));
     });
