@@ -8,7 +8,7 @@ exports.run = async(client, message, args) => {
         const synx = new Discord.MessageEmbed()
 
              .setColor('#fff000')
-             .addField(`T E N R A Guard Yardım Komutları`, `
+             .addField(`V A M P İ R E Guard Yardım Komutları`, `
              • ${prefix}antiraid aç
              • ${prefix}capsengel aç
              • ${prefix}emojikoruma aç
