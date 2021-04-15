@@ -21,7 +21,7 @@ client.on("ready", async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
 
-  client.user.setActivity(`Vampire ❤️ Mısha`, { type: "WATCHING" });
+  client.user.setActivity(`Wio ❤️ Clark`, { type: "WATCHING" });
 
   console.log("Bot Aktif!");
 });
