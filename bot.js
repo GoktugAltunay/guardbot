@@ -288,7 +288,7 @@ client.on("message", async msg => {
       "mq",
       "aq",
       "ak",
-      "amq",
+      "amq"
     ];
     if (kufur.some(word => msg.content.includes(word))) {
       try {
