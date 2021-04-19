@@ -2,41 +2,41 @@ const Discord = require('discord.js')
 const db = require('quick.db')
 
 exports.run = async(client, message, args) => {
-  if (!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send(`Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
-
+  
+if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(new Discord.MessageEmbed().setColor("RANDOM").setDescription(`Bu Komutu Kullanabilmek İçin "\`Yönetici\`" Yetkisine Sahip Olmalısın.`));
 let logk = message.mentions.channels.first();
-let logkanal = await db.fetch(`synxlog${message.guild.id}`)
-  
-  if (args[0] === "sıfırla" || args[0] === "kapat") {
-    if(!logkanal) return message.channel.send(new Discord.MessageEmbed().setDescription(`Modlog Kanalı Zaten ayarlı değil`).setColor("RANDOM"));
-    
-    db.delete(`synxlog${message.guild.id}`)
-   message.channel.send(new Discord.MessageEmbed().setDescription(`ModLog Kanalı başarıyla sıfırlandı`).setColor("RANDOM"));
-
-    return
-  }
-  
-if (!logk) return message.channel.send(new Discord.MessageEmbed().setDescription(`Bir modlog kanalı belirt`).setColor("RANDOM"));
- 
-
-db.set(`synxlog${message.guild.id}`, logk.id)
-
-message.channel.send(new Discord.MessageEmbed().setDescription(`Mod-Log kanalı başarıyla ${logk} olarak ayarlandı`).setColor("RANDOM"));
-
-console.log(`Mod-log komutu ${message.author.username} Tarafından kullanıldı`)
+let logkanal = await db.fetch(`salvomodlog_${message.guild.id}`)
+if (args[0] === "sıfırla" || args[0] === "kapat") {
+if(!logkanal) return message.channel.send(new Discord.MessageEmbed()                                          
+  .addField("Hata",`Mod-Log Ayarlı Değil`)
+  .setColor("RED")
+  .setFooter("Asreaper"));
+db.delete(`salvomodlog_${message.guild.id}`)
+message.channel.send(new Discord.MessageEmbed()
+  .addField("İşlem Başarılı",`Mod-Log Başarılı Bir Şekilde Sıfırlandı`)
+  .setColor("RED")
+  .setFooter("Asreaper"));
+return
+}
+if (!logk) return message.channel.send(new Discord.MessageEmbed()
+  .addField("Hata",`Mod-Log Kanalı Belirt`)
+  .setColor("RED")
+  .setFooter("Asreaper"));
+db.set(`salvomodlog_${message.guild.id}`, logk.id)
+message.channel.send(new Discord.RichEmbed()
+  .addField("İşlem Başarılı",`Mod-Log Kanalı ${logk} Olarak Ayarlandı`)
+  .setColor("RED")
+  .setFooter("Asreaper"));
 };
-
-
 exports.conf = {
     enabled: true,
     guildOnly: false,
     aliases: ['mod-log','modlog'],
-    permLevel: 0 ,
-  kategori:'moderasyon'
+    permLevel: 0 
 };
 
 exports.help = {
     name: 'mod-log',
-    description: 'Mod-Log kanalını belirler.',
-    usage: 'mod-log <#kanal>'
+    description: 'Moderasyon Loglarınızı Kayıt Eder',
+    usage: 'mod-log'
 };
