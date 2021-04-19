@@ -21,7 +21,7 @@ client.on("ready", async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
 
-  client.user.setActivity(`Vampire Code`, { type: "WATCHING" });
+  client.user.setActivity(`Wisky Code`, { type: "WATCHING" });
 
   console.log("Bot Aktif!");
 });
@@ -130,7 +130,7 @@ client.on("guildMemberAdd", async member => {
         .setColor("RANDOM")
         .setThumbnail(member.user.avatarURL())
         .setDescription(
-          `**${member.user.tag}** (${member.id}) adlı bota bir yetkili izin verdi eğer kaldırmak istiyorsanız **-bot-izni kaldır <botid>**.`
+          `**${member.user.tag}** (${member.id}) adlı bota bir yetkili izin verdi eğer kaldırmak istiyorsanız **!bot-izni kaldır <botid>**.`
         );
       synx2.send(synx);
     } else {
@@ -145,7 +145,7 @@ client.on("guildMemberAdd", async member => {
             member.id +
             ") " +
             "adlı bot sunucuya eklendi ve banladım eğer izin vermek istiyorsanız **" +
-            "-bot-izni ver <botid>**"
+            "!bot-izni ver <botid>**"
         );
       member.kick(); // Eğer sunucudan atmak istiyorsanız ban kısmını kick yapın
       synx2.send(izinverilmemişbot);
@@ -169,7 +169,7 @@ client.on("message", async msg => {
             msg.delete();
             return msg.channel
               .send(`${msg.member}, Capslock Kapat Lütfen!`)
-              .then(nordx => nordx.delete({ timeout: 5000 }));
+              .then(wiskyx => wiskyx.delete({ timeout: 5000 }));
           }
         }
       }
@@ -297,7 +297,7 @@ client.on("message", async msg => {
 
           return msg
             .reply("Heey! Küfür Yasak.")
-            .then(nordx => nordx.delete({ timeout: 5000 }));
+            .then(wiskyx => wiskyx.delete({ timeout: 5000 }));
         }
       } catch (err) {
         console.log(err);
@@ -345,7 +345,7 @@ client.on("messageUpdate", async msg => {
 
           return msg
             .reply("Yakaladım Seni! Küfür Yasak.")
-            .then(nordx => nordx.delete({ timeout: 5000 }));
+            .then(wiskyx => wiskyx.delete({ timeout: 5000 }));
         }
       } catch (err) {
         console.log(err);
@@ -391,7 +391,7 @@ client.on("message", msg => {
           msg.delete();
           return msg
             .reply("Yakaladım Seni! Reklam Yasak.")
-            .then(nordx => nordx.delete({ timeout: 5000 }));
+            .then(wiskyx => wiskyx.delete({ timeout: 5000 }));
         }
       } catch (err) {
         console.log(err);
@@ -414,7 +414,7 @@ client.on("message", async msg => {
         msg.delete();
         return msg
           .reply("Yakaladım Seni! Everyone ve Here Etiketlemek Yasak.")
-          .then(nordx => nordx.delete({ timeout: 5000 }));
+          .then(wiskyx => wiskyx.delete({ timeout: 5000 }));
       }
     }
   } else if (hereengelle == "kapali") {
@@ -436,8 +436,8 @@ client.on("guildMemberAdd", member => {
   var user = member.user;
   x = x.replace("birkaç saniye önce", " ");
   if (!x.includes("önce") || x.includes("sonra") || x == " ") {
-    var rol = member.guild.roles.cache.get("831628917184921690"); //Cezalı Rol İD
-    var kayıtsız = member.guild.roles.cache.get("831622565717737492"); //Alınacak Rol İD
+    var rol = member.guild.roles.cache.get("CEZALI ROL İD"); //Cezalı Rol İD
+    var kayıtsız = member.guild.roles.cache.get("ALINACAK ROL İD"); //Alınacak Rol İD
     member.roles.add(rol);
     member.user.send(
       "Hesabın 3 günden önce açıldığı için cezalıya atıldın! Açtırmak İçin Yetkililere Bildir."
@@ -455,7 +455,7 @@ client.on("guildMemberAdd", member => {
 
 client.on("channelCreate", async channel => {
   const c = channel.guild.channels.cache.get(
-    db.fetch(`nordxmodlog${channel.guild.id}`)
+    db.fetch(`wiskyxmodlog${channel.guild.id}`)
   );
   if (!c) return;
   var embed = new Discord.MessageEmbed()
@@ -474,7 +474,7 @@ client.on("channelCreate", async channel => {
 
 client.on("channelDelete", async channel => {
   const c = channel.guild.channels.cache.get(
-    db.fetch(`nordxmodlog${channel.guild.id}`)
+    db.fetch(`wiskyxmodlog${channel.guild.id}`)
   );
   if (!c) return;
   let embed = new Discord.MessageEmbed()
@@ -494,7 +494,7 @@ client.on("channelDelete", async channel => {
 
 client.on("channelNameUpdate", async channel => {
   const c = channel.guild.channels.cache.get(
-    db.fetch(`nordxmodlog${channel.guild.id}`)
+    db.fetch(`wiskyxmodlog${channel.guild.id}`)
   );
   if (!c) return;
   var embed = new Discord.MessageEmbed()
@@ -513,7 +513,7 @@ client.on("channelNameUpdate", async channel => {
 
 client.on("emojiCreate", emoji => {
   const c = emoji.guild.channels.cache.get(
-    db.fetch(`nordxmodlog${emoji.guild.id}`)
+    db.fetch(`wiskyxmodlog${emoji.guild.id}`)
   );
   if (!c) return;
 
@@ -533,7 +533,7 @@ client.on("emojiCreate", emoji => {
 });
 client.on("emojiDelete", emoji => {
   const c = emoji.guild.channels.cache.get(
-    db.fetch(`nordxmodlog${emoji.guild.id}`)
+    db.fetch(`wiskyxmodlog${emoji.guild.id}`)
   );
   if (!c) return;
 
@@ -553,7 +553,7 @@ client.on("emojiDelete", emoji => {
 });
 client.on("emojiUpdate", (oldEmoji, newEmoji) => {
   const c = newEmoji.guild.channels.cache.get(
-    db.fetch(`nordxmodlog${newEmoji.guild.id}`)
+    db.fetch(`wiskyxmodlog${newEmoji.guild.id}`)
   );
   if (!c) return;
 
@@ -576,7 +576,7 @@ client.on("messageDelete", async message => {
   if (message.author.bot) return;
 
   const channel = message.guild.channels.cache.get(
-    db.fetch(`nordxmodlog${message.guild.id}`)
+    db.fetch(`wiskyxmodlog${message.guild.id}`)
   );
   if (!channel) return;
 
@@ -605,7 +605,7 @@ client.on("messageUpdate", async (oldMessage, newMessage) => {
   if (oldMessage.content == newMessage.content) return;
 
   const channel = oldMessage.guild.channels.cache.get(
-    db.fetch(`nordxmodlog${oldMessage.guild.id}`)
+    db.fetch(`wiskyxmodlog${oldMessage.guild.id}`)
   );
   if (!channel) return;
 
@@ -626,7 +626,7 @@ client.on("messageUpdate", async (oldMessage, newMessage) => {
 
 client.on("roleCreate", async role => {
   const channel = role.guild.channels.cache.get(
-    db.fetch(`nordxmodlog${role.guild.id}`)
+    db.fetch(`wiskyxmodlog${role.guild.id}`)
   );
   if (!channel) return;
 
@@ -648,7 +648,7 @@ client.on("roleCreate", async role => {
 
 client.on("roleDelete", async role => {
   const channel = role.guild.channels.cache.get(
-    db.fetch(`nordxmodlog${role.guild.id}`)
+    db.fetch(`wiskyxmodlog${role.guild.id}`)
   );
   if (!channel) return;
 
@@ -670,11 +670,11 @@ client.on("roleDelete", async role => {
 client.on("voiceStateUpdate", (oldMember, newMember) => {
   // if (!logA[oldMember.guild.id]) return;
 
-  if (db.has(`nordxmodlog${oldMember.guild.id}`) === false) return;
+  if (db.has(`wiskyxmodlog${oldMember.guild.id}`) === false) return;
 
   var kanal = oldMember.guild.channels.cache.get(
     db
-      .fetch(`nordxmodlog${oldMember.guild.id}`)
+      .fetch(`wiskyxmodlog${oldMember.guild.id}`)
       .replace("<#", "")
       .replace(">", "")
   );
@@ -702,6 +702,6 @@ client.on("voiceStateUpdate", (oldMember, newMember) => {
 
 //Modlog Son
 client.on("ready", async () => {
-      let botVoiceChannel = client.channels.cache.get("831646515940294707");
+      let botVoiceChannel = client.channels.cache.get("Ses Kanal İD");
       if (botVoiceChannel) botVoiceChannel.join().catch(err => console.error("Bot Ses Kanalına Bağlanamıyor, Lütfen Ses Kanal ID'sini Kontrol Et."));
     });
