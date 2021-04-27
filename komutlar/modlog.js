@@ -10,23 +10,23 @@ if (args[0] === "sıfırla" || args[0] === "kapat") {
 if(!logkanal) return message.channel.send(new Discord.MessageEmbed()                                          
   .addField("Hata",`Mod-Log Ayarlı Değil`)
   .setColor("RED")
-  .setFooter("Asreaper"));
+  .setFooter("Muhammed"));
 db.delete(`salvomodlog_${message.guild.id}`)
 message.channel.send(new Discord.MessageEmbed()
   .addField("İşlem Başarılı",`Mod-Log Başarılı Bir Şekilde Sıfırlandı`)
   .setColor("RED")
-  .setFooter("Asreaper"));
+  .setFooter("Muhammed"));
 return
 }
 if (!logk) return message.channel.send(new Discord.MessageEmbed()
   .addField("Hata",`Mod-Log Kanalı Belirt`)
   .setColor("RED")
-  .setFooter("Asreaper"));
+  .setFooter("Muhammed"));
 db.set(`salvomodlog_${message.guild.id}`, logk.id)
-message.channel.send(new Discord.RichEmbed()
+message.channel.send(new Discord.MessageEmbed()
   .addField("İşlem Başarılı",`Mod-Log Kanalı ${logk} Olarak Ayarlandı`)
   .setColor("RED")
-  .setFooter("Asreaper"));
+  .setFooter("Muhammed Demirel"));
 };
 exports.conf = {
     enabled: true,
