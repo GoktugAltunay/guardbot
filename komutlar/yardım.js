@@ -5,16 +5,17 @@ var prefix = ayarlar.prefix;
 
 exports.run = async(client, message, args) => {
 
-        const Muhammed = new Discord.RichEmbed()
+        const Muhammed = new Discord.MessageEmbed()
 
              .setColor('#fff000')
-             .setAuthor(`Kategoriler`, client.user.avatarURL) 
-             .setThumbnail(client.user.avatarURL)
-             .addField(`Kategoriler`, `${prefix}moderasyon \n ${prefix}kulanıcı \n ${prefix}müzik `) // bunlar boş kalırsa hata verir
-             .addField(`Linkler ->`, `[Sunucumuz](https://discord.gg/d9RjsXh)`) // bunlar boş kalırsa hata verir
-             .setFooter(`Menüyü ${message.author.username} istedi .`, message.author.avatarURL)
+             .setTitle("Muhammed Demirel V12 Guard Botu Gelişmiş")
+             .setAuthor(`Kategoriler`, client.user.avatarURL()) 
+             .setThumbnail(client.user.avatarURL())
+             .addField(`Komutlar`, `${prefix}anti-raid \n ${prefix}bot-izni \n ${prefix}capsengel \n ${prefix}emoji-koruma \n ${prefix}ever-engel \n ${prefix}kanal-koruma \n ${prefix}küfür-engel \n ${prefix}mod-log  \n ${prefix}reklam-engel  \n ${prefix}rol-koruma  \n ${prefix}sil-üye  \n ${prefix}yavaş-mod `) // bunlar boş kalırsa hata verir
+             .addField(`Linkler ->`, `[Sunucumuz](https://discord.gg/KyhWMTQbaV)`) 
+             .setFooter(`Menüyü ${message.author.username} istedi .`, message.author.avatarURL())
             
-        return message.channel.sendEmbed(Muhammed);
+        return message.channel.send(Muhammed);
 }
 
 exports.conf = {

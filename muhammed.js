@@ -21,7 +21,7 @@ client.on("ready", async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
 
-  client.user.setActivity(`Asreaper Guard Bot`, { type: "WATCHING" });
+  client.user.setActivity(`Muhammed Demirel V12 Guard Bot`, { type: "WATCHING" });
 
   console.log("Bot Aktif!");
 });
