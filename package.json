@@ -1,8 +1,8 @@
 {
   "name": "hello-express",
   "version": "0.0.1",
-      "description": "Muhammed Demirel Guard",
-  "main": "Muhammed.js"
+      "description": "YouTube: Tetz18",
+  "main": "muhammed.js",
   "scripts": {
     "start": "node muhammed.js"
   },

@@ -21,7 +21,7 @@ client.on("ready", async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
 
-  client.user.setActivity(`Muhammed Demirel V12 Guard Bot`, { type: "WATCHING" });
+  client.user.setActivity(`YouTube: Tetz18`, { type: "WATCHING" });
 
   console.log("Bot Aktif!");
 });
@@ -264,6 +264,7 @@ client.on("message", async msg => {
   if (i) {
     const kufur = [
       "oç",
+      "tetz parayı buldu götü kalktı",
       "amk",
       "ananı sikiyim",
       "ananıskm",
