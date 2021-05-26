@@ -2,7 +2,7 @@
   "name": "hello-express",
   "version": "0.0.1",
       "description": "Muhammed Demirel Guard",
-  "main": "muhammed.js",
+  "main": "Muhammed.js"
   "scripts": {
     "start": "node muhammed.js"
   },
